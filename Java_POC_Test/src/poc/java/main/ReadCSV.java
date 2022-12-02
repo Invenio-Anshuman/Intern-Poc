@@ -56,8 +56,8 @@ public class ReadCSV {
 				}
 	         }
 	         
-	         
-	         
+	         //Output for the HashMap
+	         System.out.println("HashMap:" +lineMap);
 	         br.close();
 	         } catch(IOException ioe) {
 	            ioe.printStackTrace();
