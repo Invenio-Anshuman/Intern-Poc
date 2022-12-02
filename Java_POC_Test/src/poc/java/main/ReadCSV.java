@@ -26,6 +26,7 @@ public class ReadCSV {
 	         BufferedReader br = new BufferedReader(fr);
 	         String line = "";
 	         String[] tempArr;
+		 HashMap<String, LinePOJO> lineMap = new HashMap<String, LinePOJO>();
 	         
 	         while((line = br.readLine()) != null) {
 	        	
@@ -51,6 +52,7 @@ public class ReadCSV {
 					lineItem.setRefDocNum(line.split(";")[2]);
 					lineItem.setCity(line.split(";")[3]);
 					lineItem.setAmount(Double.parseDouble(line.split(";")[4]));
+					lineMap.put(lineItem.getRefDocNum(), lineItem);
 				}
 	         }
 	         
